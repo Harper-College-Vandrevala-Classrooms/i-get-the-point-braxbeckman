@@ -1,6 +1,7 @@
 #include "point.hpp"
 #include <cmath>
 #include <iostream>
+#include <stdexcept>
 
 Point::Point(double x, double y)
 {
@@ -82,4 +83,20 @@ Point Point::operator*(double d)
 {
   Point result(x * d, y * d);
   return result;
+}
+
+double Point::operator[](char coord)
+{
+  if (tolower(coord) == 'x')
+  {
+    return x;
+  }
+  else if (tolower(coord) == 'y')
+  {
+    return y;
+  }
+  else
+  {
+    throw std::invalid_argument("Invalid argument, please use 'x' or 'y'");
+  }
 }

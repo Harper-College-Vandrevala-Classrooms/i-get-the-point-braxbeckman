@@ -16,6 +16,7 @@ public:
   Point operator*(int i);
   Point operator*(float f);
   Point operator*(double d);
+  double operator[](char coord);
   friend std::ostream &operator<<(std::ostream &out, const Point &p);
   double getX();
   double getY();
