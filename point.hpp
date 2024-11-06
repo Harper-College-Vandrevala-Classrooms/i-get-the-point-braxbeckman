@@ -13,6 +13,9 @@ public:
   bool operator==(Point &p);
   bool operator!=(Point &p);
   Point operator/(Point &p);
+  Point operator*(int i);
+  Point operator*(float f);
+  Point operator*(double d);
   friend std::ostream &operator<<(std::ostream &out, const Point &p);
   double getX();
   double getY();

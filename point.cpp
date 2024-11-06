@@ -65,3 +65,21 @@ std::ostream &operator<<(std::ostream &out, const Point &p)
   out << "(" << p.x << ", " << p.y << ")";
   return out;
 }
+
+Point Point::operator*(int i)
+{
+  Point result(x * i, y * i);
+  return result;
+}
+
+Point Point::operator*(float f)
+{
+  Point result(x * f, y * f);
+  return result;
+}
+
+Point Point::operator*(double d)
+{
+  Point result(x * d, y * d);
+  return result;
+}
